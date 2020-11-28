@@ -13,6 +13,7 @@ int		ft_printf(char *form, ...)
 	init_tool(tool, form);
 	init_tab(tab);
 	va_start(ap, form);
+	printf("\nTEST\n");
 	while (form[tool->pos] && tool->secu > 0)
 	{
 		if (form[tool->pos] == '%')

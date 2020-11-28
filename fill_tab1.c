@@ -3,8 +3,7 @@
 void		skip(t_tool *tool, va_list ap)
 {
 	(void)ap;
-	//tool->secu = -1;
-	tool->secu = 0;
+	tool->secu = -1;
 }
 
 void	plus(t_tool *tool, va_list ap)

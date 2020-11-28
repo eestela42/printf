@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <stdarg.h>
 
-#define BUFFER_SIZE 2
+#define BUFFER_SIZE 1024
 
 typedef struct	s_tool
 {
@@ -40,6 +40,8 @@ void	asterisk(t_tool *tool, va_list ap);
 void	space(t_tool *tool, va_list ap);
 void	preci(t_tool *tool, va_list ap);
 void	width(t_tool *tool, va_list ap);
+
+void	manage_str(t_tool *tool, va_list ap);
 
 
 #endif
