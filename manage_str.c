@@ -43,3 +43,17 @@ void	manage_str(t_tool *tool, va_list ap)
 	tool->secu = 0;
 }
 
+void	manage_char(t_tool *tool, va_list ap)
+{
+	char	c;
+
+	c = (char) va_arg(ap, int);
+	if (!tool->minus)
+		put_spaces(tool, tool->width - 1);
+	tool->buff[tool->buff_i++] = c;
+	if (tool->buff_i == BUFFER_SIZE)
+		put_buff(tool);
+	if (tool->minus)
+		put_spaces(tool, tool->width - 1);
+	tool->secu = 0;
+}

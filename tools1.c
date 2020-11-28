@@ -32,7 +32,7 @@ void	init_tab(void (*tab[128])(t_tool *tool, va_list ap))
 	i = '1';
 	while (i <= '9')
 		tab[i++] = width;
-	//tab['c'] = manage_char;
+	tab['c'] = manage_char;
 	//tab['%'] = manage_per;
 	tab['s'] = manage_str;
 	//tab['d'] = manage_int;

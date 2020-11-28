@@ -12,8 +12,8 @@ int main()
 
 
 	a = 'a';
-	r = ft_printf("|%*.*s|\n", 20, 6, "abcdefg1234");
-	t =    printf("|%*.*s|\n", 20, 6, "abcdefg1234");
+	r = ft_printf("|%*c|\n", -10, 'a');
+	t =    printf("|%*c|\n", -10, 'a');
 	printf("r = %i\nt = %i\n", r, t);
 
 
@@ -25,7 +25,9 @@ int main()
 	printf("Width=	|%20s|\n", "miaou mieou");
 	printf("preci=	|%.20s|\n", "miaou mieou");
 */
-
-
-	//printf("\n|%-5c|\n", 'a');
+/*
+	int r;
+	r = printf("\n|%5c|\n", 'a');
+	printf("r = %i\n", r);
+	*/
 }

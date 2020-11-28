@@ -42,6 +42,7 @@ void	preci(t_tool *tool, va_list ap);
 void	width(t_tool *tool, va_list ap);
 
 void	manage_str(t_tool *tool, va_list ap);
+void	manage_char(t_tool *tool, va_list ap);
 
 
 #endif
