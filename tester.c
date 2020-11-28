@@ -5,18 +5,17 @@
 
 int main()
 {
-
+/*	
 	char	a;
 	int		r;
 	int		t;
 
 
 	a = 'a';
-	r = ft_printf("|%*c|\n", -10, 'a');
-	t =    printf("|%*c|\n", -10, 'a');
+	r = ft_printf("|abc%.10i123|\n", -42);
+	t =    printf("|abc%.10i123|\n", -42);
 	printf("r = %i\nt = %i\n", r, t);
-
-
+*/	
 /*
 	printf("rien=	|%s|\n", "miaou mieou");
 	printf("plus=	|%+s|\n", "miaou mieou");
@@ -25,9 +24,11 @@ int main()
 	printf("Width=	|%20s|\n", "miaou mieou");
 	printf("preci=	|%.20s|\n", "miaou mieou");
 */
-/*
+
 	int r;
-	r = printf("\n|%5c|\n", 'a');
+	//int v;
+
+	r = printf("\n|%10x|\n", 42);
+	//v = printf("\n|%10x|\n", 42);
 	printf("r = %i\n", r);
-	*/
 }

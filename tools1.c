@@ -33,10 +33,10 @@ void	init_tab(void (*tab[128])(t_tool *tool, va_list ap))
 	while (i <= '9')
 		tab[i++] = width;
 	tab['c'] = manage_char;
-	//tab['%'] = manage_per;
+	tab['%'] = manage_per;
 	tab['s'] = manage_str;
-	//tab['d'] = manage_int;
-	//tab['i'] = manage_int;
+	tab['d'] = manage_int;
+	tab['i'] = manage_int;
 	//tab['p'] = manage_add;
 	//tab['x'] = manage_hexmin;
 	//tab['X'] = manage_hexmaj;
@@ -77,7 +77,7 @@ void	tag(void (*tab[128])(t_tool *tool, va_list ap), t_tool *tool, va_list ap)
 
 		printf("\nsecu = %i\n", tool->secu);
 	}
-	printf("\n\nif_preci = %i\npreci = %i\nif_width = %i\nwidth = %i\nplus = %i\nminus = %i\nzero = %i\nspace = %i\n\n", tool->if_preci, tool->preci, tool->if_width, tool->width, tool->plus, tool->minus, tool->zero, tool->space);
+	//printf("\n\nif_preci = %i\npreci = %i\nif_width = %i\nwidth = %i\nplus = %i\nminus = %i\nzero = %i\nspace = %i\n\n", tool->if_preci, tool->preci, tool->if_width, tool->width, tool->plus, tool->minus, tool->zero, tool->space);
 	if (tool->secu == 0)
 		reset_tool(tool);
 }
