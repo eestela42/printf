@@ -4,16 +4,16 @@ int		ft_printf(char *form, ...)
 {
 	va_list		ap;
 	t_tool		*tool;
-	int			(*tab[128])(t_tool *tool, va_list ap);
+	void		(*tab[128])(t_tool *tool, va_list ap);
 	int			r;
 
-	if (!(tool = malloc(sizeof(t_tool))))
+	if (!(tool = (struct s_tool *)malloc(sizeof(t_tool))))
 		return(0);
+	//printf("\nTEST");
 	init_tool(tool, form);
-	//printf("tool->width = %i/n", tool->width);
 	init_tab(tab);
 	va_start(ap, form);
-	while (form[tool->pos])
+	while (form[tool->pos] && tool->secu > 0)
 	{
 		if (form[tool->pos] == '%')
 			tag(tab, tool, ap);
