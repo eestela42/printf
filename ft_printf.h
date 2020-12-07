@@ -33,6 +33,7 @@ void	put_buff(t_tool *tool);
 void	tag(void (*tab[128])(t_tool *tool, va_list ap), t_tool *tool, va_list ap);
 void	put_width(t_tool *tool, int spaces, char space);
 void	to_buff(t_tool *tool, char c);
+int		width_int(int preci, int size);
 
 void	skip(t_tool *tool, va_list ap);
 void	plus(t_tool *tool, va_list ap);
@@ -47,6 +48,7 @@ void	manage_str(t_tool *tool, va_list ap);
 void	manage_char(t_tool *tool, va_list ap);
 void	manage_per(t_tool *tool, va_list ap);
 void	manage_int(t_tool *tool, va_list ap);
+void	manage_hex(t_tool *tool, va_list ap);
 
 
 #endif

@@ -1,4 +1,5 @@
 #include "ft_printf.h"
+
 void	put_preci(t_tool *tool, int size)
 {
 	int		number;
@@ -31,6 +32,7 @@ int	int_reversed(int num)
 	int tab[10];
 	int	i;
 	int	y;
+	
 	i = 0;
 	y = 0;
 	if (num < 0)
@@ -47,6 +49,7 @@ int	int_reversed(int num)
 		num = num * 10 + tab[y++];
 	return(num);
 }
+
 void	int_to_buff(t_tool *tool, int num, int size)
 {
 
@@ -56,17 +59,17 @@ void	int_to_buff(t_tool *tool, int num, int size)
 		to_buff(tool, '-');
 	put_preci(tool, size);
 	num = int_reversed(num);
-		printf("\nreversed = %i", num);
-	while(num)
+	while(size)
 	{
 		to_buff(tool, num % 10 + '0');
 		num = num / 10;
+		size--;
 	}
 }
 
 void	manage_int(t_tool *tool, va_list ap)
 {
-	int		num;
+	long int		num;
 	char	space;
 	int		size;
 	int		added;
@@ -79,8 +82,7 @@ void	manage_int(t_tool *tool, va_list ap)
 	added = 0;
 	if (num < 0 || tool->plus || tool->space)
 		added++;
-	tool->width = tool->width - (tool->preci + added);
-	printf("\nadded = %i\n", added);
+	tool->width = tool->width - (width_int(tool->preci, size) + added);
 	if (added < 0)
 		added = 0;
 	if (tool->space && !tool->plus && added++)

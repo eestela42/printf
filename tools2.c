@@ -19,3 +19,10 @@ void	to_buff(t_tool *tool, char c)
 	if (tool->buff_i == BUFFER_SIZE)
 		put_buff(tool);
 }
+
+int		width_int(int preci, int size)
+{
+	if (preci >= size)
+		return(preci);
+	return(size);
+}
